@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Evaluación de Salud</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main id="game">
+
+        <section id="game-screen">
+
+            <!-- Fondo -->
+            <img
+                id="background"
+                src="./assets/background/examen.png"
+                alt=""
+            >
+
+
+            <!-- Vidas -->
+            <div id="hud">
+
+                <span id="life-icons">
+                    ❤️❤️❤️
+                </span>
+
+                <span
+                    id="lives"
+                    class="hidden"
+                >
+                    3
+                </span>
+
+            </div>
+
+
+            <!-- Cuadro de diálogo -->
+            <img
+                id="dialogue-box"
+                src="./assets/ui/dialogue-box.png"
+                alt=""
+            >
+
+
+            <!-- Personaje -->
+            <img
+                id="character-portrait"
+                src="./assets/characters/protagonista.png"
+                alt=""
+            >
+
+
+            <!-- Contenido -->
+            <section id="dialogue-content">
+
+                <div id="speaker"></div>
+
+                <p id="dialogue-text"></p>
+
+                <div id="options"></div>
+
+                <button
+                    id="next-button"
+                    type="button"
+                >
+                    Continuar
+                </button>
+
+                <p id="feedback"></p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================
+         MÚSICA
+    ============================= -->
+
+    <audio
+        id="music-main"
+        src="./assets/audio/music/base.mp3"
+        loop
+        preload="auto"
+    ></audio>
+
+    <audio
+        id="music-game-over"
+        src="./assets/audio/music/game-over.mp3"
+        loop
+        preload="auto"
+    ></audio>
+
+
+    <script
+        type="module"
+        src="./js/main.js"
+    ></script>
+
+</body>
+
+</html>
