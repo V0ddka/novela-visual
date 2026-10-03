@@ -333,12 +333,16 @@ body {
 
 #game-screen.info-scene #dialogue-content {
     left: 18%;
-    top: 31%;
+    top: 32%;
 
     width: 64%;
-    height: 36%;
+    height: 34%;
 
-    padding: 3% 4%;
+    padding:
+        4%
+        4%
+        3%
+        4%;
 
     background: transparent;
 
@@ -371,9 +375,9 @@ body {
     margin: 0;
 
     padding:
+        12px
         8px
-        8px
-        4px
+        6px
         8px;
 
     font-size: clamp(12px, 2.3vw, 20px);
@@ -396,7 +400,6 @@ body {
 
 #game-screen.info-scene #dialogue-text::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.4);
-
     border-radius: 10px;
 }
 
@@ -420,7 +423,6 @@ body {
 
 #game-screen.game-over #dialogue-content {
     left: 10%;
-
     top: 62%;
 
     width: 80%;
@@ -431,7 +433,6 @@ body {
     overflow: visible;
 
     background: none;
-
     border: none;
 
     text-align: center;
@@ -503,11 +504,10 @@ body {
 
     #dialogue-content {
         left: 8%;
-
         width: 72%;
 
-        top: 66.5%;
-        height: 24%;
+        top: 65.5%;
+        height: 25.5%;
 
         padding:
             1.5%
@@ -522,36 +522,38 @@ body {
     ---------------------------- */
 
     #speaker {
-        margin-bottom: 3px;
+        flex-shrink: 0;
 
-        font-size: clamp(
-            11px,
-            3.4vw,
-            15px
-        );
+        margin-bottom: 4px;
 
-        line-height: 1.1;
+        font-size: 13px;
+
+        line-height: 1.05;
     }
 
 
     /* ----------------------------
-       TEXTO NORMAL
+       TEXTO DEL DIÁLOGO
     ---------------------------- */
 
     #dialogue-text {
-        min-height: 0;
+        flex: 1 1 auto;
+
+        min-height: 52px;
+
+        max-height: none;
 
         overflow-y: auto;
 
-        padding-right: 3px;
+        padding:
+            2px
+            4px
+            2px
+            0;
 
-        font-size: clamp(
-            10px,
-            3.1vw,
-            14px
-        );
+        font-size: 12px;
 
-        line-height: 1.18;
+        line-height: 1.2;
     }
 
 
@@ -560,6 +562,8 @@ body {
     ---------------------------- */
 
     #options {
+        flex-shrink: 0;
+
         gap: 4px;
 
         margin-top: 4px;
@@ -567,19 +571,22 @@ body {
 
     #options button,
     #next-button {
-        min-height: 25px;
+        min-height: 28px;
 
-        padding: 3px 5px;
+        padding: 4px 5px;
 
-        font-size: clamp(
-            9px,
-            2.8vw,
-            12px
-        );
+        font-size: 11px;
     }
 
+
+    /* ----------------------------
+       CONTINUAR
+    ---------------------------- */
+
     #next-button {
-        margin-top: 4px;
+        flex-shrink: 0;
+
+        margin-top: 5px;
     }
 
 
@@ -588,13 +595,13 @@ body {
     ---------------------------- */
 
     #feedback {
-        margin-top: 3px;
+        flex-shrink: 0;
 
-        font-size: clamp(
-            8px,
-            2.3vw,
-            10px
-        );
+        margin-top: 2px;
+
+        min-height: 0;
+
+        font-size: 9px;
     }
 
 
@@ -617,18 +624,16 @@ body {
     #game-screen.info-scene #dialogue-content {
         left: 15%;
 
-        top: 27%;
+        top: 28.5%;
 
         width: 70%;
-        height: 43%;
+        height: 40%;
 
         padding:
-            4%
+            5%
             4%
             3%
             4%;
-
-        background: transparent;
 
         overflow: hidden;
 
@@ -638,7 +643,7 @@ body {
     #game-screen.info-scene #dialogue-text {
         display: block;
 
-        flex: 1;
+        flex: 1 1 auto;
 
         width: 100%;
 
@@ -647,18 +652,14 @@ body {
         margin: 0;
 
         padding:
-            8px
+            14px
             6px
-            4px
+            6px
             6px;
 
         overflow-y: auto;
 
-        font-size: clamp(
-            11px,
-            3.2vw,
-            15px
-        );
+        font-size: 13px;
 
         line-height: 1.3;
 
@@ -666,16 +667,16 @@ body {
     }
 
     #game-screen.info-scene #next-button {
+        flex-shrink: 0;
+
         width: 90%;
 
-        min-height: 28px;
+        min-height: 30px;
 
         margin:
-            6px
+            8px
             auto
             0;
-
-        flex-shrink: 0;
     }
 
 
