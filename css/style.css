@@ -694,3 +694,309 @@ body {
         margin-top: 30px;
     }
 }
+
+
+@media (max-width: 600px) {
+
+    /* ========================================
+       DIÁLOGOS NORMALES DEL DOCTOR / PROFESORA
+    ======================================== */
+
+    #game-screen:not(.info-scene):not(.game-over)
+    #dialogue-content {
+
+        left: 8%;
+        width: 72%;
+
+        top: 66.7%;
+        height: 22.5%;
+
+        padding:
+            1.2%
+            2%
+            1.2%
+            2%;
+
+        display: grid;
+
+        /*
+            1 = nombre
+            2 = texto
+            3 = respuestas
+            4 = continuar
+            5 = mensaje de error
+        */
+        grid-template-rows:
+            auto
+            minmax(0, 1fr)
+            auto
+            auto
+            auto;
+
+        row-gap: 3px;
+
+        overflow: hidden;
+    }
+
+
+    /* ========================================
+       NOMBRE DEL PERSONAJE
+    ======================================== */
+
+    #game-screen:not(.info-scene):not(.game-over)
+    #speaker {
+
+        margin: 0;
+
+        font-size: 11px;
+        line-height: 1.05;
+
+        font-weight: bold;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    /* ========================================
+       TEXTO DEL DIÁLOGO
+    ======================================== */
+
+    #game-screen:not(.info-scene):not(.game-over)
+    #dialogue-text {
+
+        margin: 0;
+
+        min-height: 0;
+
+        overflow-y: auto;
+
+        padding:
+            4px
+            7px;
+
+        font-size: 10.5px;
+
+        line-height: 1.25;
+
+        /*
+            Fondo suave solamente detrás
+            del texto para aumentar contraste.
+        */
+
+        background:
+            rgba(0, 0, 0, 0.20);
+
+        border-radius: 4px;
+
+        scrollbar-width: thin;
+    }
+
+
+    /* ========================================
+       SCROLL
+    ======================================== */
+
+    #game-screen:not(.info-scene):not(.game-over)
+    #dialogue-text::-webkit-scrollbar {
+
+        width: 3px;
+    }
+
+    #game-screen:not(.info-scene):not(.game-over)
+    #dialogue-text::-webkit-scrollbar-thumb {
+
+        background:
+            rgba(255, 255, 255, 0.45);
+
+        border-radius: 10px;
+    }
+
+
+    /* ========================================
+       OPCIONES DE RESPUESTA
+    ======================================== */
+
+    #game-screen:not(.info-scene):not(.game-over)
+    #options {
+
+        margin: 2px 0 0 0;
+
+        gap: 3px;
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    #game-screen:not(.info-scene):not(.game-over)
+    #options button {
+
+        min-height: 23px;
+
+        padding:
+            2px
+            4px;
+
+        font-size: 9px;
+
+        line-height: 1.1;
+    }
+
+
+    /* ========================================
+       BOTÓN CONTINUAR
+    ======================================== */
+
+    #game-screen:not(.info-scene):not(.game-over)
+    #next-button {
+
+        width: 88%;
+
+        min-height: 24px;
+
+        margin:
+            2px
+            auto
+            0;
+
+        padding:
+            2px
+            5px;
+
+        font-size: 10px;
+
+        line-height: 1;
+    }
+
+
+    /* ========================================
+       MENSAJE DE RESPUESTA INCORRECTA
+    ======================================== */
+
+    #game-screen:not(.info-scene):not(.game-over)
+    #feedback {
+
+        margin: 1px 0 0;
+
+        min-height: 0;
+
+        font-size: 8px;
+
+        line-height: 1.05;
+    }
+
+
+    /* ========================================
+       CABEZA DE LA PROTAGONISTA
+    ======================================== */
+
+    #character-portrait {
+
+        width: 39%;
+
+        right: -6%;
+        bottom: -2%;
+    }
+
+
+    /* ========================================
+       ESCENAS DE INFORMACIÓN
+    ======================================== */
+
+    #game-screen.info-scene
+    #dialogue-content {
+
+        left: 16%;
+        top: 29%;
+
+        width: 68%;
+        height: 39%;
+
+        padding:
+            5%
+            4%
+            3%
+            4%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        overflow: hidden;
+    }
+
+    #game-screen.info-scene
+    #dialogue-text {
+
+        flex: 1;
+
+        min-height: 0;
+
+        margin: 0;
+
+        padding:
+            10px
+            8px
+            5px;
+
+        overflow-y: auto;
+
+        font-size: 12px;
+
+        line-height: 1.35;
+
+        text-align: center;
+
+        /*
+            Sin cuadrado azul.
+            Solo una sombra suave para
+            que se lea sobre pinguino.png.
+        */
+
+        background: transparent;
+
+        text-shadow:
+            1px 1px 2px black;
+    }
+
+    #game-screen.info-scene
+    #next-button {
+
+        flex-shrink: 0;
+
+        width: 82%;
+
+        min-height: 26px;
+
+        margin:
+            6px
+            auto
+            0;
+
+        padding: 3px;
+
+        font-size: 10px;
+    }
+
+
+    /* ========================================
+       GAME OVER
+    ======================================== */
+
+    #game-screen.game-over
+    #dialogue-content {
+
+        top: 62%;
+    }
+
+    #game-screen.game-over
+    #options {
+
+        width: 68%;
+
+        margin-top: 40px;
+    }
+}
